@@ -6,7 +6,7 @@ import Page2 from './Page2';
 
 const Page1 = () => {
 
-  const bubbleRef = useRef(null);
+  const bubble1 = useRef(null);
 
   useEffect(() => {
     gsap.to(bubbleRef.current, {
@@ -27,13 +27,12 @@ const Page1 = () => {
       </div>
 
       {/* Bubble Image with GSAP ref */}
+        {/* 🫧 Bubble 1 */}
       <img
-        ref={bubbleRef}
-        src="../public/bubble.png"
-        alt="bubble"
-        className="w-[350px] h-[350px] object-contain absolute top-10 right-10 pointer-events-none"
+        ref={bubble1}
+        src="/bubble.png"
+        className="w-[200px] absolute right-20 top-32  pointer-events-none"
       />
-
         <div
         
         className="absolute top-60 left-1/2 -translate-x-1/2 flex gap-2 items-center text-white text-lg font-medium "

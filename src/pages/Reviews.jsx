@@ -32,12 +32,12 @@ const Reviews = () => {
     }
   }, []);
 
-  const bubbleRef = useRef(null);
-  const bubbleRef1 = useRef(null);
-   const bubbleRef2 = useRef(null);
+  const bubble1 = useRef(null);
+  const bubble2 = useRef(null);
+   const bubble3 = useRef(null);
   
     useEffect(() => {
-      gsap.to(bubbleRef.current, {
+      gsap.to(bubble1.current, {
         y: -40,         // move upward
         duration: 3,    // seconds
         ease: "ease.inOut",
@@ -46,7 +46,7 @@ const Reviews = () => {
       });
     }, []);
         useEffect(() => {
-      gsap.to(bubbleRef1.current, {
+      gsap.to(bubble2.current, {
         y: -40,         // move upward
         duration: 3,    // seconds
         ease: "ease.inOut",
@@ -55,7 +55,7 @@ const Reviews = () => {
       });
     }, []);
         useEffect(() => {
-      gsap.to(bubbleRef2.current, {
+      gsap.to(bubble3.current, {
         y: -40,         // move upward
         duration: 3,    // seconds
         ease: "ease.inOut",
@@ -110,23 +110,23 @@ const Reviews = () => {
         <h2 className="text-2xl md:text-4xl font-bold text-center !mb-12 text-gray-800">
           What Our Users Say!!
         </h2>
-          <img
-          ref={bubbleRef2}
-        src="../public/bubble2.png"
-        alt="bubble"
-        className="h-[350px] w-[350px] object-contain  top-10 left-10 inline pointer-events-none"
+            {/* 🫧 Bubble 1 */}
+      <img
+        ref={bubble1}
+        src="/bubble.png"
+        className="w-[200px] absolute right-20 top-32  pointer-events-none"
       />
-        <img
-        ref={bubbleRef}
-        src="../public/bubble.png"
-        alt="bubble"
-        className="w-[350px] h-[350px] object-contain  top-10 right-10 inline pointer-events-none"
+          {/* 🫧 Bubble 1 */}
+      <img
+        ref={bubble2}
+        src="/bubble2.png"
+        className="w-[200px] absolute right-20 top-32  pointer-events-none"
       />
-       <img
-        ref={bubbleRef1}
-        src="../public/bubble2.png"
-        alt="bubble"
-        className="w-[350px] h-[350px] object-contain  top-10 right-10 inline pointer-events-none"
+         {/* 🫧 Bubble 1 */}
+      <img
+        ref={bubble3}
+        src="/bubble1.png"
+        className="w-[200px] absolute right-20 top-32  pointer-events-none"
       />
 
     
