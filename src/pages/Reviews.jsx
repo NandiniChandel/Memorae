@@ -111,23 +111,7 @@ const Reviews = () => {
           What Our Users Say!!
         </h2>
             {/* 🫧 Bubble 1 */}
-      <img
-        ref={bubble1}
-        src="/bubble.png"
-        className="w-[200px] absolute right-20 top-32  pointer-events-none"
-      />
-          {/* 🫧 Bubble 1 */}
-      <img
-        ref={bubble2}
-        src="/bubble2.png"
-        className="w-[200px] absolute right-20 top-32  pointer-events-none"
-      />
-         {/* 🫧 Bubble 1 */}
-      <img
-        ref={bubble3}
-        src="/bubble1.png"
-        className="w-[200px] absolute right-20 top-32  pointer-events-none"
-      />
+    
 
     
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

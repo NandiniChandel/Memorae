@@ -6,8 +6,8 @@ import Last from "./Last";
 import Review from "./Reviews";
 
 const Page2 = () => {
-  const bubble1 = useRef(null);
-  const bubble2 = useRef(null);
+  const bubbleRef = useRef(null);
+  const bubbleRef1 = useRef(null);
 
   // RANDOM FLOATING FUNCTION
   const floatRandom = (element, range = 80, duration = 5) => {
@@ -24,8 +24,8 @@ const Page2 = () => {
   };
 
   useEffect(() => {
-    floatRandom(bubble1, 100, 6);
-    floatRandom(bubble2, 120, 7);
+    floatRandom(bubbleRef, 100, 6);
+    floatRandom(bubbleRef1, 120, 7);
   }, []);
 
   return (
@@ -33,28 +33,25 @@ const Page2 = () => {
     <div className="page2 relative min-h-screen w-screen overflow-hidden flex items-center justify-center px-8 py-20">
 
       {/* 🫧 Bubble 1 */}
-      <img
-        ref={bubble1}
+       <img
+        ref={bubbleRef}
         src="/bubble.png"
         className="w-[200px] absolute right-20 top-32  pointer-events-none"
       />
-
-      {/* 🫧 Bubble 2 */}
-      <img
-        ref={bubble2}
-        src="/bubble.png"
-        className="w-[150px] absolute left-16 bottom-24 opacity-80 pointer-events-none"
-      />
+   
+    
 
       {/* 🌈 Overlay for better contrast */}
       
 
       {/* ⭐ Star Decoration */}
+      
       <img
         src="/star.png"
-        className="w-14 absolute left-12 top-32 opacity-90"
+        className="w-14 absolute !left-0 !top-500 opacity-90"
         alt=""
       />
+    
 
       {/* CONTENT */}
       <div className="relative max-w-3xl text-center text-white leading-relaxed space-y-6 drop-shadow-[0_0_10px_rgba(0,0,0,0.6)]">
@@ -70,11 +67,13 @@ const Page2 = () => {
             You.
           </span>
         </motion.h1>
+        
 
         <p className="text-[1.35rem] text-white !mt-10">
           You normalized living with your head about to explode.
           And you don't even notice anymore.
         </p>
+        
 
         <p className="text-[1.35rem] text-white">
           There's always something pending. Something you forget.
@@ -101,6 +100,11 @@ organization were the goal, not thesolution.
           className="text-3xl text-purple-200 drop-shadow-[0_0_12px_rgba(180,60,255,0.8)] font-extrabold"
         >
           Until you decide to let go.
+                        <img
+        ref={bubbleRef1}
+        src="/bubble.png"
+        className="w-[200px] absolute right-20 top-32  pointer-events-none"
+      />
         </motion.h2>
         <br />
 
@@ -109,7 +113,9 @@ organization were the goal, not thesolution.
           They just stay. And they give you back something
           you lost a long time ago:
         </p>
-        <br /><br />
+        <br />
+        <br />
+        
 
         <motion.h2
           initial={{ scale: 0.8, opacity: 0 }}
@@ -118,10 +124,15 @@ organization were the goal, not thesolution.
           className="text-6xl font-extrabold text-green-300 drop-shadow-[0_0_15px_rgba(80,255,150,0.8)]"
         >
           Peace of mind.
+   
+  
         </motion.h2>
+        
+        
       </div>
      
     </div>
+    
      <Review />
      <Last></Last>
      </>
