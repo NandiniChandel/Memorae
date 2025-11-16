@@ -9,7 +9,7 @@ const Page1 = () => {
   const bubble1 = useRef(null);
 
   useEffect(() => {
-    gsap.to(bubbleRef.current, {
+    gsap.to(bubble1.current, {
       y: -40,         // move upward
       duration: 3,    // seconds
       ease: "ease.inOut",
