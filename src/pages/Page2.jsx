@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { gsap } from "gsap";
 
 import Last from "./Last";
+import Review from "./Reviews";
 
 const Page2 = () => {
   const bubble1 = useRef(null);
@@ -121,6 +122,7 @@ organization were the goal, not thesolution.
       </div>
      
     </div>
+     <Review />
      <Last></Last>
      </>
   );

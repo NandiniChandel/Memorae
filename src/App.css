@@ -28,3 +28,12 @@
   background-size: cover;
   
 }
+
+/* REVIEWS */
+.reviews{
+  background-image: url('/bg.png');
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
